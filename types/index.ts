@@ -4,8 +4,7 @@ import { MouseEventHandler } from "react"
 export interface CustomButtonProps {
     title:string
     containerStyles?:string
-    handleClick?:
-    MouseEventHandler<HTMLButtonElement>
+    handleClick?:MouseEventHandler<HTMLButtonElement>
     btnType?: "button" | "submit" 
     textStyles?: string;
     rightIcon?: string
@@ -46,4 +45,9 @@ export interface OptionProps{
 export  interface CustomFilterProps {
     title: string;
     options: OptionProps[]
+}
+
+export interface ShowMoreProps{
+    pageNumber: number;
+    isNext: boolean;
 }

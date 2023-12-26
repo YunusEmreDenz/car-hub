@@ -3,7 +3,7 @@
 import {useState} from 'react'
 import Image from 'next/image'
 import { CarProps } from '@/types'
-import { CustomButton } from '.'
+import  CustomButton  from './CustomButton'
 import { calculateCarRent, generateCarImageUrl } from '@/utils'
 import CarDetails from './CarDetails'
 
@@ -13,9 +13,7 @@ interface CarCardProps {
 
 const CarCard = ({ car }:CarCardProps) => {
     const {city_mpg, year, make, model, transmission, drive} = car
-
-
-const [isOpen, setisOpen] = useState(false)
+    const [isOpen, setisOpen] = useState(false)
 
     const carRent = calculateCarRent(city_mpg, year)
 
@@ -38,7 +36,12 @@ const [isOpen, setisOpen] = useState(false)
         </p>
 
     <div className='relative w-full h-40 my-3 object-contain '>
-        <Image src={generateCarImageUrl(car)} alt='car model' fill priority className='object-contain'/>
+        <Image 
+        src={generateCarImageUrl(car)} 
+        alt='car model' 
+        fill 
+        priority 
+        className='object-contain'/>
     </div>
 
         <div className='relative flex w-full mt-2'>
@@ -48,7 +51,7 @@ const [isOpen, setisOpen] = useState(false)
                     <p className='text-[14px]'>
                         {transmission==="a" ? "Automatic" : "Manual"}
                     </p>
-                </div>
+                </div>{" "}
                 <div className='flex flex-col justify-center items-center gap-2'>
                     <Image src="/tire.svg" width={20} height={20}  alt='tire'/>
                     <p className='text-[14px]'>

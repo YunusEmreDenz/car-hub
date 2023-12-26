@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image";
-import { Fragment } from "react";
+import React, { Fragment } from "react";
 import { generateCarImageUrl } from '@/utils'
 import { Dialog, Transition } from "@headlessui/react";
 

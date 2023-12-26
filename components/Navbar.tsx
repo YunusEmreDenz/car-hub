@@ -1,3 +1,4 @@
+import React from "react"
 import Link from "next/link"
 import Image from "next/image"
 
@@ -16,7 +17,7 @@ const Navbar = () => {
             />
         </Link>
         <CustomButton
-            title="Login"
+            title="Sign In"
             btnType="button"
             containerStyles="text-primary-blue rounded-full bg-white min-w-[130px]"
         />
